@@ -1,5 +1,19 @@
 
-SFML  =	-lsfml-audio-s -lsfml-graphics-s -lsfml-window-s -lsfml-system-s -lopengl32 -lglu32# -mwindows
+ifeq ($(OS),Windows_NT)
+  SFML  = -lsfml-audio-s    \
+          -lsfml-graphics-s \
+          -lsfml-window-s   \
+          -lsfml-system-s   \
+          -lopengl32        \
+          -lglu32
+else
+  SFML  = -lsfml-audio    \
+          -lsfml-graphics \
+          -lsfml-window   \
+          -lsfml-system   \
+          -lGL            \
+          -lGLU
+endif
 SRC   = list.cpp
 MAIN  =	main.cpp
 OUT   =	lfsr.exe
