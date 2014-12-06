@@ -1,0 +1,82 @@
+\documentclass{article}
+
+\usepackage{fullpage}
+\usepackage{setspace}
+
+\usepackage{amsmath,amssymb,amsthm,amscd,tikz,graphicx,subfig,wrapfig,mathrsfs}
+
+\usepackage{mathcore}
+
+\usepackage{hyperref}
+
+\begin{document}
+
+\title{Vulcan I Generative Music Tool v1.1}
+\date{}
+\author{TechTech Technolgies}
+\maketitle
+
+\tableofcontents
+
+\section{Background}
+
+The function $f(t,m) = t \& m,$ where $\&$ is the bitwise AND operation, generates fractal sequences possessing some familiar musical qualities. Figure \ref{fig:maskTable} gives an example of the values of $f(t,m)$ for $t,m \in [0,7].$ 
+
+\begin{figure}[h]
+\center
+$
+\begin{array}{c|llllllll}
+m\backslash t & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7\\\hline
+0& 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+1& 0 & 1 & 0 & 1 & 0 & 1 & 0 & 1\\
+2& 0 & 0 & 2 & 2 & 0 & 0 & 2 & 2\\
+3& 0 & 1 & 2 & 3 & 0 & 1 & 2 & 3\\
+4& 0 & 0 & 0 & 0 & 4 & 4 & 4 & 4\\
+5& 0 & 1 & 0 & 1 & 4 & 5 & 4 & 5\\
+6& 0 & 0 & 2 & 2 & 4 & 4 & 6 & 6\\
+7& 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7\\
+\end{array}
+$
+\caption{Bitwise AND of values between 0 and 7}
+\label{fig:maskTable}
+\end{figure}
+Vulcan primarily uses sequences where $m$ is fixed and $t = [a,b],$ which produces sequences that tend to elaborate on a theme and contain repeated phrases with lengths in powers of two, both of which are common characteristics in notated music. The most obvious example in figure \ref{fig:maskTable} occurs when $m=5$. The extended sequence for $m=5$
+$$
+\begin{array}{l|llllllllllllllll}
+t    & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15\\ \hline
+t\&5 & 0 & 1 & 0 & 1 & 4 & 5 & 4 & 5 & 0 & 1 & 0 & 1 & 4 & 5 & 4 & 5
+\end{array}
+$$
+reveals a theme of the form $a, b, a, b$ established as $0,1,0,1$ and expanded as $4,5,4,5$. The theme is also present on a larger scale with $a = (0,1,0,1)$ and $b = (4,5,4,5)$. This example is very simple because the mask value $m$ is quite small. Larger values of $m$ can yield longer and more complex sequences with similar melodic qualities. For example $m=85$ and $t = [92,107]$ produce the sequence
+$$
+\begin{array}{l|llllllllllllllll}
+t    & 92 & 93 & 94 & 95 & 96 & 97 & 98 & 99 & 100 & 101 & 102 & 103 & 104 & 105 & 106 & 107\\ \hline
+t\&85 & 84 & 85 & 84 & 85 & \color{red}{64} & \color{red}{65} & \color{red}{64} & \color{red}{65} & 68 & 69 & 68 & 69 & \color{red}{64} & \color{red}{65} & \color{red}{64} & \color{red}{65}
+\end{array}
+$$
+which contains three different groups matching the $a,b,a,b$ form arrange in a second form: $a,b,c,b$.
+
+Vulcan I provides a set of tools for generating masked sequences and converting those sequences to musical tones to generate polyphonic music-like 
+
+\section{Interface}
+
+\section{Sequencing}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
