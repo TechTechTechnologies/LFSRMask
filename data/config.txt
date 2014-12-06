@@ -1,0 +1,1 @@
+0 512 0xFCC 0xFFF 0 0xFC0 0 data/testSeq.txt

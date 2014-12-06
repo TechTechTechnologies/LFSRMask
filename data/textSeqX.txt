@@ -1,0 +1,44 @@
+1 4 4 4
+startAll 0 0 0 0\
+
+setAll 0 1 0 0
+s1 0 FCC 0 1.5\
+
+setVol 0 2 0 0
+s* .5\
+
+/comment\
+
+setPos 2 1 0 0
+s2 0 FCC\
+
+setSPos 2.5 1 0 0
+s1 1 0\
+
+movPos 0 2 0 0
+s3 -16 0\
+
+setBox 0 3 0 0
+0 FCC 100 33\
+
+setStep 0 4 0 0
+3\
+
+setStep 2 4 0 0
+0\
+
+create 3 1 0 0
+name 0 FDC 1 1\
+
+delete 0 0 1 0
+name\
+
+pause 0 1 1 0
+s0\
+
+play 2 1 1 0
+s0\
+
+reset 0 3 1 0 -1\
+
+end 0 3 1 0\

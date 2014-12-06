@@ -1,0 +1,36 @@
+1.5 4 4 4
+startAll 0 0 0 0\
+
+setBox 0 0 0 0
+0 FCC 7F 2F\
+
+setStep 0 0 0 0
+2\
+
+create 0 0 0 0
+s3 0 FF0 0 1\
+
+create 0 0 0 0
+s0 0 FE4 .2 1\
+
+create 0 0 0 0
+s1 0 FD8 -.2 1\
+
+delete 0 1.99 0 0
+s0\
+delete 0 1.99 0 0
+s1\
+
+create 0 2 0 0
+s0 0 FD8 -.2 1\
+
+create 0 2 0 0
+s1 0 FE4 .2 1\
+
+create 0 2 0 0
+s2 0 FCC 0 1\
+
+create 0 0 1 0
+s3 20 FF0 -1 0\
+
+end 0 3 1 0\
